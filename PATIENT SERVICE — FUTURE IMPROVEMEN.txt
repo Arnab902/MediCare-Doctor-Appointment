@@ -1,0 +1,83 @@
+PATIENT SERVICE — FUTURE IMPROVEMENTS
+
+CURRENTLY DONE:
+[✓] Create Patient
+[✓] Get Patient
+[✓] Get All Patients
+[✓] Update Patient
+[✓] Delete Patient
+[✓] Validation
+[✓] Exception Handling
+[✓] PostgreSQL Integration
+
+FUTURE IMPROVEMENTS:
+
+1. DTO
+   [ ] PatientResponseDTO
+   [ ] PatientUpdateDTO
+   [ ] Separate Request / Response models
+
+2. VALIDATION
+   [ ] Stronger name validation
+   [ ] Email validation
+   [ ] Unique email
+   [ ] Phone number validation
+   [ ] Unique phone number
+   [ ] Password validation
+
+3. PASSWORD SECURITY
+   [ ] BCrypt password encryption
+   [ ] Never store plain-text passwords
+   [ ] Password update functionality
+   [ ] Forgot password
+   [ ] Reset password
+
+4. PATIENT PROFILE
+   [ ] Date of birth
+   [ ] Gender
+   [ ] Address
+   [ ] Emergency contact
+   [ ] Profile image
+   [ ] Medical profile information
+
+5. DATABASE
+   [ ] Unique constraints
+   [ ] Database indexes
+   [ ] Proper column constraints
+   [ ] createdAt
+   [ ] updatedAt
+   [ ] Audit information
+
+6. PAGINATION & SORTING
+   [ ] Pagination
+   [ ] Sorting
+   [ ] Search patients
+   [ ] Filter patients where required
+
+7. SECURITY
+   [ ] Spring Security
+   [ ] JWT
+   [ ] Patient authentication
+   [ ] Patient authorization
+   [ ] Role-based access
+   [ ] OAuth2
+
+8. API
+   [ ] Swagger / OpenAPI
+   [ ] Standard API response
+   [ ] Better error response
+   [ ] API versioning
+   [ ] Logging
+
+9. PERFORMANCE
+   [ ] Query optimization
+   [ ] Database indexing
+   [ ] Caching
+   [ ] Redis
+
+10. TESTING
+    [ ] JUnit
+    [ ] Mockito
+    [ ] Controller testing
+    [ ] Service testing
+    [ ] Integration testing

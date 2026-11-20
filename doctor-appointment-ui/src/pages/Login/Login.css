@@ -1,0 +1,496 @@
+.login-page {
+  min-height: calc(100vh - 72px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f8fafc;
+
+  padding: 60px 8%;
+}
+
+
+.login-container {
+  width: 100%;
+  max-width: 1100px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  background: white;
+
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   LEFT SIDE
+   ========================= */
+
+.login-left {
+  padding: 70px 55px;
+
+  background: #eff6ff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.login-brand {
+  font-size: 24px;
+  font-weight: 700;
+
+  color: #1e3a8a;
+
+  margin-bottom: 50px;
+}
+
+
+.login-left h1 {
+  font-size: 44px;
+  line-height: 1.15;
+
+  color: #111827;
+
+  margin-bottom: 20px;
+}
+
+
+.login-left > p {
+  max-width: 430px;
+
+  font-size: 16px;
+  line-height: 1.7;
+
+  color: #6b7280;
+
+  margin-bottom: 35px;
+}
+
+
+/* Benefits */
+
+.login-benefits {
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+
+.login-benefits div {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  font-size: 15px;
+
+  color: #374151;
+}
+
+
+.login-benefits span {
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #2563eb;
+
+  color: white;
+
+  font-size: 13px;
+}
+
+
+/* =========================
+   LOGIN CARD
+   ========================= */
+
+.login-card {
+  padding: 60px 55px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.login-card h2 {
+  font-size: 30px;
+
+  color: #111827;
+
+  margin-bottom: 8px;
+}
+
+
+.login-subtitle {
+  color: #6b7280;
+
+  font-size: 14px;
+
+  margin-bottom: 30px;
+}
+
+
+/* Form */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 20px;
+}
+
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #374151;
+
+  margin-bottom: 8px;
+}
+
+
+.form-group input {
+  width: 100%;
+
+  height: 48px;
+
+  padding: 0 14px;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 7px;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition: 0.2s;
+}
+
+
+.form-group input:focus {
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* Login Options */
+
+.login-options {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+
+  font-size: 13px;
+}
+
+
+.remember-me {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: #4b5563;
+}
+
+
+.remember-me input {
+  cursor: pointer;
+}
+
+
+.login-options a {
+  text-decoration: none;
+
+  color: #2563eb;
+
+  font-weight: 500;
+}
+
+
+/* Login Button */
+
+.login-submit {
+  width: 100%;
+
+  height: 48px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: #2563eb;
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+.login-submit:hover {
+  background: #1d4ed8;
+}
+
+
+/* Divider */
+
+.login-divider {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin: 28px 0;
+
+  color: #9ca3af;
+
+  font-size: 12px;
+}
+
+
+.login-divider::before,
+.login-divider::after {
+  content: "";
+
+  flex: 1;
+
+  height: 1px;
+
+  background: #e5e7eb;
+}
+
+
+/* Google */
+
+.google-login {
+  width: 100%;
+
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  background: white;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 7px;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  color: #374151;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+.google-login:hover {
+  background: #f9fafb;
+}
+
+
+.google-login span {
+  font-weight: 700;
+
+  font-size: 18px;
+}
+
+
+/* Register */
+
+.register-text {
+  text-align: center;
+
+  margin-top: 25px;
+
+  font-size: 14px;
+
+  color: #6b7280;
+}
+
+
+.register-text a {
+  color: #2563eb;
+
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+
+/* =========================
+   LOGIN ERROR POPUP
+   ========================= */
+
+.login-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(4px);
+
+  animation: loginFadeIn 0.2s ease;
+}
+
+.login-modal {
+  width: 100%;
+  max-width: 420px;
+
+  padding: 35px 30px;
+
+  background: #ffffff;
+  border-radius: 16px;
+
+  text-align: center;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+
+  animation: loginPopup 0.25s ease;
+}
+
+.login-modal-icon {
+  width: 65px;
+  height: 65px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 20px;
+
+  border-radius: 50%;
+
+  background: #fff1f0;
+  color: #dc2626;
+
+  font-size: 38px;
+  font-weight: 600;
+}
+
+.login-modal-icon.blocked {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.login-modal h2 {
+  margin-bottom: 12px;
+
+  color: #111827;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.login-modal p {
+  margin-bottom: 15px;
+
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.login-modal-help {
+  margin-bottom: 22px;
+
+  padding: 12px;
+
+  background: #f9fafb;
+  border-radius: 8px;
+
+  color: #6b7280;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.login-modal-button {
+  width: 100%;
+  height: 46px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #2563eb;
+  color: white;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.login-modal-button:hover {
+  background: #1d4ed8;
+}
+
+@keyframes loginFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes loginPopup {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 480px) {
+  .login-modal {
+    padding: 30px 22px;
+  }
+}

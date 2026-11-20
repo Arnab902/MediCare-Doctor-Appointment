@@ -1,0 +1,1059 @@
+
+/* =========================================
+   ADMIN DASHBOARD
+========================================= */
+
+.admin-dashboard {
+  width: 100%;
+  min-height: calc(100vh - 72px);
+  padding: 45px 6%;
+  background-color: #f8fafc;
+  box-sizing: border-box;
+}
+
+/* Header */
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.admin-header p {
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #167d8d;
+  letter-spacing: 1px;
+}
+
+.admin-header h1 {
+  margin-bottom: 8px;
+  font-size: 32px;
+  color: #111827;
+}
+
+.admin-header span {
+  color: #6b7280;
+  font-size: 15px;
+}
+
+.admin-profile {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 20px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+}
+
+.admin-avatar {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e6f4f5;
+  border-radius: 50%;
+  font-size: 26px;
+}
+
+.admin-profile h3 {
+  margin-bottom: 4px;
+  font-size: 15px;
+  color: #111827;
+}
+
+.admin-profile p {
+  margin: 0;
+  font-size: 13px;
+  color: #6b7280;
+  letter-spacing: 0;
+}
+
+/* Statistics */
+
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.admin-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 22px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+}
+
+.admin-stat-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e6f4f5;
+  border-radius: 8px;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.admin-stat-card span {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.admin-stat-card h2 {
+  margin-bottom: 4px;
+  font-size: 25px;
+  color: #111827;
+}
+
+.admin-stat-card small {
+  font-size: 11px;
+  color: #059669;
+}
+
+/* Main Content */
+
+.admin-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.admin-panel,
+.admin-side-panel {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+}
+
+.admin-panel {
+  padding: 25px;
+}
+
+.admin-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.admin-side-panel {
+  padding: 25px;
+}
+
+/* Panel Header */
+
+.admin-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.admin-panel-header p {
+  margin-bottom: 5px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #167d8d;
+  letter-spacing: 1px;
+}
+
+.admin-panel-header h2 {
+  font-size: 20px;
+  color: #111827;
+}
+
+.admin-view-all-btn {
+  padding: 8px 15px;
+  background: transparent;
+  border: 1px solid #167d8d;
+  border-radius: 6px;
+  color: #167d8d;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.admin-view-all-btn:hover {
+  background: #e6f4f5;
+}
+
+/* Doctor Rows */
+
+.admin-doctor-row {
+  display: grid;
+  grid-template-columns: 45px minmax(150px, 1fr) auto auto;
+  align-items: center;
+  gap: 15px;
+  padding: 20px 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+.admin-doctor-avatar {
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e6f4f5;
+  border-radius: 50%;
+  font-size: 21px;
+}
+
+.admin-doctor-info {
+  min-width: 0;
+}
+
+.admin-doctor-info h3 {
+  margin-bottom: 4px;
+  font-size: 14px;
+  color: #111827;
+}
+
+.admin-doctor-info p {
+  margin-bottom: 4px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.admin-doctor-info span {
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+.admin-doctor-info h3,
+.admin-doctor-info p,
+.admin-doctor-info span {
+  overflow-wrap: anywhere;
+}
+
+/* Status */
+
+.admin-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.pending-status {
+  background: #fff7ed;
+  color: #ea580c;
+}
+
+.approved-status,
+.active-status,
+.confirmed-status {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.blocked-status,
+.cancelled-status {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.completed-status {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+/* Doctor Status */
+
+.doctor-action-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-width: 0;
+}
+
+/* Buttons */
+
+.admin-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.admin-actions button,
+.admin-view-btn {
+  padding: 7px 11px;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.2s ease;
+}
+
+.admin-view-btn {
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  color: #374151;
+}
+
+.admin-view-btn:hover {
+  background: #f3f4f6;
+}
+
+.admin-approve-btn {
+  background: #167d8d;
+  border: 1px solid #167d8d;
+  color: #ffffff;
+}
+
+.admin-approve-btn:hover {
+  background: #116875;
+}
+
+.admin-block-btn {
+  background: #ffffff;
+  border: 1px solid #ef4444;
+  color: #ef4444;
+}
+
+.admin-block-btn:hover {
+  background: #fef2f2;
+}
+
+.admin-actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Quick Actions */
+
+.quick-action-btn {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 12px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  color: #374151;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.quick-action-btn:hover {
+  background: #e6f4f5;
+  border-color: #b5dfe3;
+}
+
+/* Bottom Grid */
+
+.admin-bottom-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+/* Patient */
+
+.patient-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+.patient-avatar {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3f4f6;
+  border-radius: 50%;
+  font-size: 19px;
+}
+
+.patient-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.patient-info h3 {
+  margin-bottom: 3px;
+  font-size: 13px;
+  color: #111827;
+}
+
+.patient-info p {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+/* Appointments */
+
+.appointment-admin-row {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr auto auto;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+.appointment-admin-row h3 {
+  margin-bottom: 4px;
+  font-size: 13px;
+  color: #111827;
+}
+
+.appointment-admin-row p {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.appointment-admin-row span {
+  display: block;
+  font-size: 11px;
+  color: #374151;
+}
+
+.appointment-admin-row small {
+  font-size: 10px;
+  color: #9ca3af;
+}
+
+/* Error Message */
+
+.doctor-error {
+  padding: 12px;
+  color: #dc2626;
+  background: #fef2f2;
+  border-radius: 6px;
+}
+
+/* =========================================
+   DOCTOR DETAILS MODAL
+========================================= */
+
+.doctor-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  overflow-y: auto;
+  background: rgba(15, 23, 42, 0.62);
+  backdrop-filter: blur(4px);
+  box-sizing: border-box;
+}
+
+.doctor-modal-overlay *,
+.doctor-modal-overlay *::before,
+.doctor-modal-overlay *::after {
+  box-sizing: border-box;
+}
+
+.doctor-modal-overlay .doctor-modal.doctor-details-modal {
+  position: relative;
+  display: block;
+  flex: 0 1 1200px;
+  width: min(1200px, 90vw);
+  min-width: 0;
+  max-width: 1200px;
+  max-height: calc(100vh - 48px);
+  margin: auto;
+  padding: 42px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
+  animation: doctorModalAppear 0.25s ease;
+}
+
+@keyframes doctorModalAppear {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Modal Header */
+
+.doctor-modal-overlay .doctor-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 0 0 30px;
+  padding-right: 38px;
+}
+
+.doctor-modal-overlay .doctor-modal-header p {
+  margin: 0 0 7px;
+  color: #167d8d;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.doctor-modal-overlay .doctor-modal-header h2 {
+  margin: 0;
+  color: #111827;
+  font-size: 28px;
+  line-height: 1.3;
+}
+
+.doctor-modal-overlay .doctor-modal-close {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  flex: 0 0 36px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: #f3f4f6;
+  color: #4b5563;
+  cursor: pointer;
+  font-size: 20px;
+  transition: 0.2s ease;
+}
+
+.doctor-modal-overlay .doctor-modal-close:hover {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* Doctor Profile Card */
+
+.doctor-modal-overlay .doctor-profile-card {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  width: 100%;
+  min-width: 0;
+  margin: 0 0 32px;
+  padding: 28px;
+  background: linear-gradient(135deg, #e6f4f5, #f0fdfa);
+  border: 1px solid #d5ebed;
+  border-radius: 14px;
+}
+
+.doctor-modal-overlay .doctor-profile-avatar {
+  flex: 0 0 82px;
+  width: 82px;
+  height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 2px solid #c5e5e8;
+  border-radius: 50%;
+  color: #167d8d;
+  font-size: 38px;
+}
+
+.doctor-modal-overlay .doctor-profile-info {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.doctor-modal-overlay .doctor-profile-info h2 {
+  margin: 0 0 6px;
+  color: #111827;
+  font-size: 23px;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.doctor-modal-overlay .doctor-profile-info p {
+  margin: 0 0 8px;
+  color: #52616b;
+  font-size: 15px;
+}
+
+.doctor-modal-overlay .doctor-profile-info span {
+  color: #167d8d;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Profile Status */
+
+.doctor-modal-overlay .doctor-profile-status {
+  flex: 0 0 auto;
+  margin: 0 0 0 auto;
+  padding: 9px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.doctor-modal-overlay .doctor-profile-status.approved-status {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.doctor-modal-overlay .doctor-profile-status.pending-status {
+  background: #fff7ed;
+  color: #c2410c;
+}
+
+.doctor-modal-overlay .doctor-profile-status.blocked-status {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+/* Information Sections */
+
+.doctor-modal-overlay .doctor-details-section {
+  width: 100%;
+  margin: 0 0 30px;
+}
+
+.doctor-modal-overlay .doctor-details-section h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 18px;
+  padding: 0 0 14px;
+  border-bottom: 1px solid #e5e7eb;
+  color: #111827;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.doctor-modal-overlay .doctor-details-section h3::before {
+  content: none;
+}
+
+.doctor-modal-overlay .doctor-details-section h3 span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  border-radius: 8px;
+  background: #e6f4f5;
+  font-size: 18px;
+}
+
+/* Personal Information - 2 Columns */
+
+.doctor-modal-overlay .doctor-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  width: 100%;
+}
+
+/* Professional Information - 4 Columns */
+
+.doctor-modal-overlay .doctor-professional-row {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: stretch;
+  gap: 14px;
+  width: 100%;
+  min-width: 0;
+}
+
+.doctor-modal-overlay .doctor-professional-item {
+  flex: 1 1 25% !important;
+  min-width: 0;
+  padding: 20px 15px;
+  background: #f8fafc;
+  border: 1px solid #edf0f3;
+  border-radius: 10px;
+  transition: 0.2s ease;
+}
+
+.doctor-modal-overlay .doctor-professional-item:hover {
+  background: #f0fdfa;
+  border-color: #c5e5e8;
+}
+
+.doctor-modal-overlay .doctor-professional-item label {
+  display: block;
+  margin: 0 0 10px;
+  color: #8993a1;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.doctor-modal-overlay .doctor-professional-item p {
+  margin: 0;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+/* Detail Cards - Personal Information */
+
+.doctor-modal-overlay .doctor-detail-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  min-height: 100px;
+  padding: 20px;
+  background: #f8fafc;
+  border: 1px solid #edf0f3;
+  border-radius: 10px;
+  transition: 0.2s ease;
+}
+
+.doctor-modal-overlay .doctor-detail-item:hover {
+  background: #f0fdfa;
+  border-color: #c5e5e8;
+}
+
+.doctor-modal-overlay .doctor-detail-item label {
+  display: block;
+  margin: 0 0 10px;
+  color: #8993a1;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.doctor-modal-overlay .doctor-detail-item p {
+  margin: 0;
+  color: #374151;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+/* Modal Footer */
+
+.doctor-modal-overlay .doctor-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  padding-top: 22px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.doctor-modal-overlay .doctor-modal-done-btn {
+  min-width: 120px;
+  padding: 12px 26px;
+  background: #167d8d;
+  border: 1px solid #167d8d;
+  border-radius: 7px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.doctor-modal-overlay .doctor-modal-done-btn:hover {
+  background: #116875;
+  border-color: #116875;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 1200px) {
+  .admin-doctor-row {
+    grid-template-columns: 45px minmax(120px, 1fr) auto auto;
+    gap: 10px;
+  }
+
+  .admin-actions button {
+    padding: 7px 9px;
+  }
+
+  .doctor-modal-overlay .doctor-modal.doctor-details-modal {
+    width: 94vw;
+    padding: 32px;
+  }
+}
+
+@media (max-width: 900px) {
+  .admin-doctor-row {
+    grid-template-columns: 45px minmax(0, 1fr);
+  }
+
+  .doctor-action-group,
+  .admin-actions {
+    grid-column: 2;
+    justify-content: flex-start;
+  }
+
+  .admin-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .admin-content {
+    grid-template-columns: 1fr;
+  }
+
+  .doctor-modal-overlay .doctor-details-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .doctor-modal-overlay .doctor-professional-item {
+    padding: 15px 10px;
+  }
+
+  .doctor-modal-overlay .doctor-professional-item label {
+    font-size: 10px;
+  }
+
+  .doctor-modal-overlay .doctor-professional-item p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .admin-dashboard {
+    padding: 25px 4%;
+  }
+
+  .admin-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .admin-header h1 {
+    font-size: 25px;
+  }
+
+  .admin-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-panel,
+  .admin-side-panel {
+    padding: 18px;
+  }
+
+  .admin-doctor-row {
+    gap: 10px;
+  }
+
+  .doctor-action-group {
+    flex-wrap: wrap;
+  }
+
+  .admin-actions {
+    flex-wrap: wrap;
+  }
+
+  .admin-actions button {
+    padding: 7px 9px;
+    font-size: 10px;
+  }
+
+  .appointment-admin-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Mobile Modal */
+
+  .doctor-modal-overlay {
+    align-items: flex-start;
+    padding: 12px;
+  }
+
+  .doctor-modal-overlay .doctor-modal.doctor-details-modal {
+    flex-basis: 100%;
+    width: 100%;
+    max-width: 100%;
+    max-height: calc(100vh - 24px);
+    margin: auto;
+    padding: 22px 17px;
+    border-radius: 13px;
+  }
+
+  .doctor-modal-overlay .doctor-modal-header h2 {
+    font-size: 21px;
+  }
+
+  .doctor-modal-overlay .doctor-modal-close {
+    top: 16px;
+    right: 16px;
+  }
+
+  .doctor-modal-overlay .doctor-profile-card {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 13px;
+    padding: 17px;
+  }
+
+  .doctor-modal-overlay .doctor-profile-avatar {
+    flex-basis: 58px;
+    width: 58px;
+    height: 58px;
+    font-size: 26px;
+  }
+
+  .doctor-modal-overlay .doctor-profile-info {
+    flex: 1 1 calc(100% - 75px);
+  }
+
+  .doctor-modal-overlay .doctor-profile-info h2 {
+    font-size: 17px;
+  }
+
+  .doctor-modal-overlay .doctor-profile-status {
+    margin: 2px 0 0;
+  }
+
+  .doctor-modal-overlay .doctor-details-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  /* Professional Information - 2 Columns on Mobile */
+
+  .doctor-modal-overlay .doctor-professional-row {
+    flex-wrap: wrap !important;
+    gap: 10px;
+  }
+
+  .doctor-modal-overlay .doctor-professional-item {
+    flex: 1 1 calc(50% - 10px) !important;
+    min-width: 0;
+    padding: 13px;
+  }
+
+  .doctor-modal-overlay .doctor-detail-item {
+    min-height: 85px;
+    padding: 13px;
+  }
+
+  .doctor-modal-overlay .doctor-detail-item label {
+    font-size: 10px;
+  }
+
+  .doctor-modal-overlay .doctor-detail-item p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 380px) {
+  .doctor-modal-overlay .doctor-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .doctor-modal-overlay .doctor-professional-row {
+    flex-direction: column !important;
+  }
+
+  .doctor-modal-overlay .doctor-professional-item {
+    flex-basis: 100% !important;
+  }
+}
+
+/* =========================================
+   APPOINTMENT MANAGEMENT - ADDITIONAL
+========================================= */
+
+.appointment-admin-row > div {
+  min-width: 0;
+}
+
+.appointment-admin-row h3,
+.appointment-admin-row p,
+.appointment-admin-row span,
+.appointment-admin-row small {
+  overflow-wrap: anywhere;
+}
+
+.appointment-admin-row .admin-view-btn {
+  justify-self: end;
+}
+
+.appointment-admin-row .admin-status {
+  justify-self: center;
+}
+
+.appointment-admin-row button {
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .appointment-admin-row {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    row-gap: 10px;
+  }
+
+  .appointment-admin-row .admin-status {
+    justify-self: start;
+  }
+
+  .appointment-admin-row .admin-view-btn {
+    justify-self: end;
+  }
+}
+
+/* =========================================
+   QUICK ACTIONS - SMOOTH SCROLL
+========================================= */
+
+#doctor-management,
+#patient-management,
+#appointment-management {
+  scroll-margin-top: 25px;
+}
+
+html {
+  scroll-behavior: smooth;
+}

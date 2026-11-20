@@ -1,0 +1,639 @@
+/* =========================================================
+   Patient Register Page
+   ========================================================= */
+
+.register-page {
+  min-height: 100vh;
+
+  padding: 50px 24px;
+
+  background:
+    radial-gradient(circle at top left, #dbeafe 0, transparent 35%),
+    radial-gradient(circle at bottom right, #e0f2fe 0, transparent 35%),
+    #f8fafc;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   Main Container
+   ========================================================= */
+
+.register-container {
+  width: 100%;
+  max-width: 1180px;
+
+  display: grid;
+  grid-template-columns: 390px 1fr;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
+
+  overflow: hidden;
+
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.12);
+}
+
+
+/* =========================================================
+   Left Section
+   ========================================================= */
+
+.register-left {
+  position: relative;
+
+  padding: 48px 40px;
+
+  background: linear-gradient(
+    145deg,
+    #2563eb,
+    #1d4ed8 55%,
+    #1e40af
+  );
+
+  color: #ffffff;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  box-sizing: border-box;
+}
+
+
+/* Decorative Circle */
+
+.register-left::before {
+  content: "";
+
+  position: absolute;
+
+  width: 270px;
+  height: 270px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  top: -100px;
+  right: -110px;
+}
+
+
+/* Decorative Circle */
+
+.register-left::after {
+  content: "";
+
+  position: absolute;
+
+  width: 190px;
+  height: 190px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  bottom: -75px;
+  left: -75px;
+}
+
+
+/* =========================================================
+   Brand
+   ========================================================= */
+
+.register-brand {
+  position: relative;
+  z-index: 1;
+
+  display: inline-flex;
+  align-items: center;
+
+  width: fit-content;
+
+  padding: 9px 15px;
+
+  margin-bottom: 34px;
+
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  letter-spacing: 0.3px;
+}
+
+
+/* =========================================================
+   Left Heading
+   ========================================================= */
+
+.register-left h1 {
+  position: relative;
+  z-index: 1;
+
+  margin: 0 0 18px;
+
+  color: #ffffff;
+
+  font-size: 38px;
+  line-height: 1.15;
+
+  font-weight: 700;
+
+  letter-spacing: -0.8px;
+}
+
+
+.register-left > p {
+  position: relative;
+  z-index: 1;
+
+  margin: 0;
+
+  max-width: 310px;
+
+  color: rgba(255, 255, 255, 0.84);
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   Benefits
+   ========================================================= */
+
+.register-benefits {
+  position: relative;
+  z-index: 1;
+
+  margin-top: 38px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+}
+
+
+.register-benefits > div {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  color: rgba(255, 255, 255, 0.95);
+
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+
+.register-benefits span {
+  width: 25px;
+  height: 25px;
+
+  min-width: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   Registration Card
+   ========================================================= */
+
+.register-card {
+  padding: 48px 54px 42px;
+
+  background: #ffffff;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   Header
+   ========================================================= */
+
+.register-card h2 {
+  margin: 0;
+
+  color: #0f172a;
+
+  font-size: 30px;
+  line-height: 1.2;
+
+  font-weight: 700;
+
+  letter-spacing: -0.5px;
+}
+
+
+.register-subtitle {
+  margin: 9px 0 10px;
+
+  color: #64748b;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   Doctor Registration Link
+   ========================================================= */
+
+.doctor-register-text {
+  margin: 0 0 28px;
+
+  color: #64748b;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+.doctor-register-text a {
+  margin-left: 5px;
+
+  color: #2563eb;
+
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+
+.doctor-register-text a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   Form
+   ========================================================= */
+
+.register-card form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+
+/* =========================================================
+   Form Groups
+   ========================================================= */
+
+.register-form-group {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+
+.register-form-group label {
+  color: #334155;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   Input Fields
+   ========================================================= */
+
+.register-form-group input {
+  width: 100%;
+  height: 46px;
+
+  padding: 0 14px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #dbe2ea;
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  color: #0f172a;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+
+.register-form-group input::placeholder {
+  color: #94a3b8;
+}
+
+
+.register-form-group input:hover {
+  border-color: #b8c4d3;
+}
+
+
+.register-form-group input:focus {
+  border-color: #2563eb;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* =========================================================
+   Show Password
+   ========================================================= */
+
+.show-password-checkbox {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  margin-top: -3px;
+
+  color: #64748b;
+
+  font-size: 13px;
+
+  cursor: pointer;
+}
+
+
+.show-password-checkbox input {
+  width: 16px;
+  height: 16px;
+
+  margin: 0;
+
+  accent-color: #2563eb;
+
+  cursor: pointer;
+}
+
+
+.show-password-checkbox span {
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   Terms & Conditions
+   ========================================================= */
+
+.terms-checkbox {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  color: #64748b;
+
+  font-size: 13px;
+
+  cursor: pointer;
+}
+
+
+.terms-checkbox input {
+  width: 16px;
+  height: 16px;
+
+  margin: 0;
+
+  accent-color: #2563eb;
+
+  cursor: pointer;
+}
+
+
+.terms-checkbox span {
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   Register Button
+   ========================================================= */
+
+.register-submit {
+  width: 100%;
+  height: 48px;
+
+  margin-top: 5px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #1d4ed8
+  );
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 6px 16px rgba(37, 99, 235, 0.2);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+
+.register-submit:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 8px 20px rgba(37, 99, 235, 0.25);
+}
+
+
+.register-submit:active {
+  transform: translateY(0);
+}
+
+
+.register-submit:disabled {
+  opacity: 0.55;
+
+  cursor: not-allowed;
+
+  transform: none;
+
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   Login Text
+   ========================================================= */
+
+.login-text {
+  margin: 20px 0 0;
+
+  text-align: center;
+
+  color: #64748b;
+
+  font-size: 13px;
+}
+
+
+.login-text a {
+  color: #2563eb;
+
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+
+.login-text a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   Tablet
+   ========================================================= */
+
+@media (max-width: 950px) {
+
+  .register-container {
+    grid-template-columns: 320px 1fr;
+  }
+
+  .register-left {
+    padding: 40px 30px;
+  }
+
+  .register-left h1 {
+    font-size: 32px;
+  }
+
+  .register-card {
+    padding: 40px 35px;
+  }
+}
+
+
+/* =========================================================
+   Mobile
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+  .register-page {
+    padding: 20px 12px;
+  }
+
+  .register-container {
+    grid-template-columns: 1fr;
+
+    border-radius: 18px;
+  }
+
+  .register-left {
+    padding: 35px 28px;
+  }
+
+  .register-left h1 {
+    font-size: 30px;
+  }
+
+  .register-left > p {
+    max-width: none;
+  }
+
+  .register-benefits {
+    margin-top: 28px;
+  }
+
+  .register-card {
+    padding: 35px 25px;
+  }
+}
+
+
+/* =========================================================
+   Small Mobile
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .register-page {
+    padding: 10px;
+  }
+
+  .register-left {
+    padding: 28px 22px;
+  }
+
+  .register-left h1 {
+    font-size: 27px;
+  }
+
+  .register-brand {
+    margin-bottom: 25px;
+  }
+
+  .register-card {
+    padding: 28px 18px;
+  }
+
+  .register-card h2 {
+    font-size: 25px;
+  }
+}

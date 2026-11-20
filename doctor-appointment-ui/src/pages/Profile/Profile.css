@@ -1,0 +1,412 @@
+.profile-page {
+  min-height: calc(100vh - 72px);
+  padding: 45px 6% 70px;
+  background-color: #f8fafc;
+}
+
+.profile-container {
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+/* =========================
+   Page Header
+========================= */
+
+.profile-page-header {
+  margin-bottom: 25px;
+}
+
+.profile-page-header h1 {
+  margin: 0 0 6px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #1e3a8a;
+}
+
+.profile-page-header p {
+  margin: 0;
+  font-size: 15px;
+  color: #6b7280;
+}
+
+/* =========================
+   Profile Card
+========================= */
+
+.profile-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+/* =========================
+   Profile Header
+========================= */
+
+.profile-card-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 28px 32px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile-avatar {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background-color: #eff6ff;
+  color: #2563eb;
+
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.profile-identity {
+  min-width: 0;
+}
+
+.profile-identity h2 {
+  margin: 0 0 5px;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  color: #111827;
+}
+
+.profile-identity p {
+  margin: 0;
+
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* =========================
+   Error / Success Messages
+========================= */
+
+.profile-error {
+  margin: 20px 32px 0;
+  padding: 12px 14px;
+
+  border-radius: 6px;
+
+  background-color: #fef2f2;
+  color: #b91c1c;
+
+  font-size: 14px;
+}
+
+.profile-success {
+  margin: 20px 32px 0;
+  padding: 12px 14px;
+
+  border-radius: 6px;
+
+  background-color: #f0fdf4;
+  color: #15803d;
+
+  font-size: 14px;
+}
+
+/* =========================
+   Profile Sections
+========================= */
+
+.profile-section {
+  padding: 28px 32px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile-section h3 {
+  margin: 0 0 22px;
+
+  font-size: 17px;
+  font-weight: 700;
+
+  color: #111827;
+}
+
+/* =========================
+   Profile Grid
+========================= */
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 22px 28px;
+}
+
+.profile-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.profile-field-full {
+  grid-column: 1 / -1;
+}
+
+.profile-field label {
+  font-size: 13px;
+  font-weight: 600;
+
+  color: #6b7280;
+}
+
+.profile-value {
+  min-height: 20px;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  color: #111827;
+}
+
+/* =========================
+   Edit Inputs
+========================= */
+
+.profile-field input {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 11px 13px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+
+  background-color: #ffffff;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  color: #111827;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.profile-field input:focus {
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 3px #dbeafe;
+}
+
+/* =========================
+   Bottom Actions
+========================= */
+
+.profile-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 18px 32px;
+}
+
+/* =========================
+   ALL ACTION BUTTONS
+========================= */
+
+.profile-actions button {
+  width: 120px !important;
+  height: 38px !important;
+
+  min-width: 120px !important;
+  max-width: 120px !important;
+
+  padding: 0 !important;
+  margin: 0 !important;
+
+  box-sizing: border-box;
+
+  border-radius: 6px;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  white-space: nowrap;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+/* =========================
+   Back Button
+========================= */
+
+.profile-actions .back-btn {
+  width: 120px !important;
+  height: 38px !important;
+
+  border: 1px solid #d1d5db;
+
+  background-color: #ffffff;
+
+  color: #374151;
+}
+
+.profile-actions .back-btn:hover {
+  background-color: #f9fafb;
+}
+
+/* =========================
+   Edit Profile Button
+========================= */
+
+.profile-actions .edit-profile-btn {
+  width: 120px !important;
+  height: 38px !important;
+
+  border: 1px solid #2563eb;
+
+  background-color: #2563eb;
+
+  color: #ffffff;
+}
+
+.profile-actions .edit-profile-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* =========================
+   Save Changes Button
+========================= */
+
+.profile-actions .save-btn {
+  width: 120px !important;
+  height: 38px !important;
+
+  border: 1px solid #2563eb;
+
+  background-color: #2563eb;
+
+  color: #ffffff;
+}
+
+.profile-actions .save-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* =========================
+   Disabled Buttons
+========================= */
+
+.profile-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =========================
+   Loading
+========================= */
+
+.profile-loading {
+  display: flex;
+  justify-content: center;
+
+  padding: 80px 20px;
+
+  color: #6b7280;
+
+  font-size: 15px;
+}
+
+/* =========================
+   Message Card
+========================= */
+
+.profile-message-card {
+  max-width: 500px;
+
+  margin: 70px auto;
+  padding: 35px;
+
+  background-color: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+
+  text-align: center;
+
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+}
+
+.profile-message-card h2 {
+  margin: 0 0 10px;
+
+  color: #1e3a8a;
+}
+
+.profile-message-card p {
+  margin: 0;
+
+  color: #6b7280;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 700px) {
+
+  .profile-page {
+    padding: 30px 20px 50px;
+  }
+
+  .profile-card-header {
+    padding: 24px 20px;
+  }
+
+  .profile-identity h2 {
+    font-size: 18px;
+  }
+
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-field-full {
+    grid-column: auto;
+  }
+
+  .profile-section {
+    padding: 24px 20px;
+  }
+
+  .profile-actions {
+    padding: 18px 20px;
+  }
+
+  .profile-actions button {
+    width: 120px !important;
+    min-width: 120px !important;
+    max-width: 120px !important;
+  }
+}

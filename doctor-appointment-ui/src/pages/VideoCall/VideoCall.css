@@ -1,0 +1,221 @@
+.video-call-page {
+  min-height: 100vh;
+  background: #0f172a;
+  padding-bottom: 30px;
+  color: white;
+}
+
+/* Header */
+
+.video-call-header {
+  height: 80px;
+  padding: 0 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #111827;
+  border-bottom: 1px solid #334155;
+}
+
+.video-call-doctor {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.doctor-small-image {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #e0f2fe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
+
+.video-call-doctor h2 {
+  font-size: 17px;
+  margin-bottom: 3px;
+}
+
+.video-call-doctor p {
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.call-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #86efac;
+  font-size: 14px;
+}
+
+.status-dot {
+  width: 9px;
+  height: 9px;
+  background: #22c55e;
+  border-radius: 50%;
+}
+
+.call-duration {
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+/* Main Video */
+
+.video-main-area {
+  height: 620px;
+  margin: 25px 35px;
+  position: relative;
+  background: #020617;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.doctor-video {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.doctor-video-placeholder {
+  text-align: center;
+}
+
+.doctor-video-placeholder {
+  font-size: 100px;
+}
+
+.doctor-video-placeholder h2 {
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+.doctor-video-label {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  padding: 8px 14px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 7px;
+  font-size: 13px;
+}
+
+/* Patient Video */
+
+.patient-video {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  width: 220px;
+  height: 150px;
+  background: #1e293b;
+  border: 2px solid #475569;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.patient-placeholder {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+}
+
+.patient-video span {
+  position: absolute;
+  left: 10px;
+  bottom: 8px;
+  font-size: 12px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+
+/* Controls */
+
+.video-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin: 25px 0;
+}
+
+.video-control-btn {
+  width: 75px;
+  height: 65px;
+  border: none;
+  border-radius: 10px;
+  background: #1e293b;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.video-control-btn:hover {
+  background: #334155;
+}
+
+.video-control-btn span,
+.end-call-btn span {
+  font-size: 11px;
+}
+
+.end-call-btn {
+  width: 85px;
+  height: 65px;
+  border: none;
+  border-radius: 10px;
+  background: #dc2626;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.end-call-btn:hover {
+  background: #b91c1c;
+}
+
+/* Appointment Information */
+
+.video-appointment-info {
+  margin: 0 35px;
+  padding: 20px 25px;
+  background: #111827;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.video-appointment-info div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.video-appointment-info small {
+  color: #64748b;
+  font-size: 11px;
+}
+
+.video-appointment-info strong {
+  color: #e2e8f0;
+  font-size: 13px;
+}

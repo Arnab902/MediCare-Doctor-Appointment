@@ -1,0 +1,91 @@
+DOCTOR SERVICE — FUTURE IMPROVEMENTS
+
+CURRENTLY DONE:
+[✓] Create Doctor
+[✓] Get All Doctors
+[✓] Get Doctor By ID
+[✓] Search Doctor By Name
+[✓] Search Doctor By Specialization
+[✓] Update Doctor
+[✓] PATCH Partial Update
+[✓] Delete Doctor
+[✓] DTO Validation
+[✓] Global Exception Handling
+[✓] PostgreSQL Integration
+
+FUTURE IMPROVEMENTS:
+
+1. DTO
+   [ ] DoctorResponseDTO
+   [ ] Separate Request / Response models
+
+2. VALIDATION
+   [ ] Stronger doctor validation
+   [ ] Unique email
+   [ ] Unique phone number
+   [ ] Experience validation
+   [ ] Consultation fee validation
+   [ ] Specialization validation
+
+3. DATABASE
+   [ ] Unique constraints
+   [ ] Database indexes
+   [ ] Proper column constraints
+   [ ] createdAt
+   [ ] updatedAt
+   [ ] Audit information
+
+4. SEARCH & FILTER
+   [ ] Search by specialization
+   [ ] Search by language
+   [ ] Filter by experience
+   [ ] Filter by consultation fee
+   [ ] Filter by availability
+   [ ] Multiple filters together
+
+5. PAGINATION & SORTING
+   [ ] Pagination
+   [ ] Sort by experience
+   [ ] Sort by consultation fee
+   [ ] Sort by name
+
+6. DOCTOR AVAILABILITY
+   [ ] Weekly availability
+   [ ] Working days
+   [ ] Working hours
+   [ ] Multiple time slots
+   [ ] Real-time availability checking
+
+7. DOCTOR PROFILE
+   [ ] Better profile management
+   [ ] Profile image upload
+   [ ] Doctor bio
+   [ ] Clinic/hospital information
+   [ ] Location information
+
+8. SECURITY
+   [ ] Spring Security
+   [ ] JWT
+   [ ] Doctor authentication
+   [ ] Doctor authorization
+   [ ] Role-based access
+
+9. API
+   [ ] Swagger / OpenAPI
+   [ ] Standard API response
+   [ ] Better error response
+   [ ] API versioning
+   [ ] Logging
+
+10. PERFORMANCE
+    [ ] Query optimization
+    [ ] Database indexing
+    [ ] Caching
+    [ ] Redis
+
+11. TESTING
+    [ ] JUnit
+    [ ] Mockito
+    [ ] Controller testing
+    [ ] Service testing
+    [ ] Integration testing

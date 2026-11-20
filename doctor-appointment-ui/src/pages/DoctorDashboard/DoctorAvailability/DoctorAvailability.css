@@ -1,0 +1,1485 @@
+
+/* ========================================
+   MediCare - Manage Availability
+======================================== */
+
+.availability-page {
+  min-height: 100vh;
+  padding: 38px 5%;
+  background:
+    radial-gradient(ellipse at 8% 0%, rgb(218 245 245 / 48%), transparent 30%),
+    #f5f8fb;
+  color: #193944;
+}
+
+.availability-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* Header */
+
+.availability-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 28px;
+  margin-bottom: 30px;
+}
+
+.availability-heading-content {
+  max-width: 700px;
+}
+
+.availability-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  color: #16808b;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.availability-breadcrumb > span:not(.availability-breadcrumb-dot) {
+  color: #a2b4ba;
+}
+
+.availability-breadcrumb-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #21a69e;
+  box-shadow: 0 0 0 4px rgb(33 166 158 / 12%);
+}
+
+.availability-header h1 {
+  margin: 15px 0 10px;
+  color: #163b46;
+  font-size: clamp(29px, 3.5vw, 39px);
+  line-height: 1.18;
+  font-weight: 800;
+  letter-spacing: -1.2px;
+}
+
+.availability-header p {
+  max-width: 620px;
+  margin: 0;
+  color: #72858e;
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.availability-back-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-shrink: 0;
+  min-height: 44px;
+  padding: 0 17px;
+  border: 1px solid #dce7eb;
+  border-radius: 11px;
+  background: #fff;
+  color: #345b66;
+  font-size: 12px;
+  font-weight: 750;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgb(25 65 78 / 3%);
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.availability-back-btn > span {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.availability-back-btn:hover {
+  border-color: #b9dfe1;
+  background: #effafa;
+  transform: translateY(-1px);
+}
+
+/* Alerts */
+
+.availability-alert {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.availability-alert-icon {
+  display: grid;
+  flex-shrink: 0;
+  width: 25px;
+  height: 25px;
+  place-items: center;
+  border-radius: 50%;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.availability-alert-message {
+  min-width: 0;
+  flex: 1;
+  overflow-wrap: anywhere;
+}
+
+.availability-alert button {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.availability-alert-error {
+  border-color: #f0d0d0;
+  background: #fff6f5;
+  color: #a6383d;
+}
+
+.availability-alert-error .availability-alert-icon {
+  background: #ffe2df;
+  color: #a6383d;
+}
+
+.availability-alert-error button {
+  color: #a6383d;
+}
+
+.availability-alert-success {
+  border-color: #c6e9d8;
+  background: #f1fbf5;
+  color: #24764c;
+}
+
+.availability-alert-success .availability-alert-icon {
+  background: #d9f5e4;
+  color: #24764c;
+}
+
+.availability-alert-success button {
+  color: #24764c;
+}
+
+/* Doctor profile */
+
+.availability-profile-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 25px;
+  margin-bottom: 20px;
+  border: 1px solid #e2ecef;
+  border-radius: 17px;
+  background: rgb(255 255 255 / 95%);
+  box-shadow: 0 5px 24px rgb(23 66 79 / 4%);
+}
+
+.availability-profile-main {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  min-width: 0;
+}
+
+.availability-profile-avatar {
+  display: grid;
+  flex-shrink: 0;
+  width: 59px;
+  height: 59px;
+  place-items: center;
+  border: 4px solid #f1fbfb;
+  border-radius: 17px;
+  background: linear-gradient(140deg, #168b98, #25b4a6);
+  color: #fff;
+  font-size: 25px;
+  font-weight: 800;
+  box-shadow: 0 4px 12px rgb(22 125 141 / 15%);
+}
+
+.availability-profile-info {
+  min-width: 0;
+}
+
+.availability-small-label {
+  display: inline-block;
+  color: #17828d;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.25px;
+}
+
+.availability-profile-info h2 {
+  margin: 6px 0 5px;
+  color: #1c414c;
+  font-size: 20px;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.availability-profile-info p {
+  margin: 0;
+  color: #788b93;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.availability-profile-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  padding: 8px 12px;
+  border: 1px solid #dcece4;
+  border-radius: 999px;
+  background: #f1faf5;
+  color: #2c7953;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.availability-profile-status > span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.availability-status-pending {
+  border-color: #f3e3bd;
+  background: #fff9e9;
+  color: #9a6a12;
+}
+
+.availability-status-rejected {
+  border-color: #f0d1d1;
+  background: #fff4f4;
+  color: #ae4141;
+}
+
+/* Statistics */
+
+.availability-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 17px;
+  margin-bottom: 25px;
+}
+
+.availability-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+  padding: 19px;
+  border: 1px solid #e4edef;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 4px 17px rgb(23 66 79 / 3%);
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.availability-stat-card:hover {
+  border-color: #cfe5e8;
+  box-shadow: 0 8px 22px rgb(23 66 79 / 6%);
+  transform: translateY(-2px);
+}
+
+.availability-stat-icon {
+  display: grid;
+  flex-shrink: 0;
+  width: 45px;
+  height: 45px;
+  place-items: center;
+  border-radius: 13px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.availability-stat-icon-teal {
+  background: #e7f7f6;
+  color: #14878b;
+}
+
+.availability-stat-icon-blue {
+  background: #eaf1ff;
+  color: #5579d6;
+}
+
+.availability-stat-icon-purple {
+  background: #f2edff;
+  color: #8463cc;
+}
+
+.availability-stat-card > div:last-child {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.availability-stat-card > div:last-child > span {
+  color: #788b93;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.availability-stat-card strong {
+  color: #1b414c;
+  font-size: 24px;
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.availability-stat-card .availability-stat-location {
+  font-size: 14px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+/* Main panels */
+
+.availability-layout {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.88fr) minmax(0, 1.35fr);
+  align-items: start;
+  gap: 22px;
+}
+
+.availability-panel {
+  min-width: 0;
+  padding: 25px;
+  border: 1px solid #e2ecef;
+  border-radius: 17px;
+  background: #fff;
+  box-shadow: 0 5px 24px rgb(23 66 79 / 4%);
+}
+
+.availability-panel-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 23px;
+}
+
+.availability-panel-heading h2 {
+  margin: 7px 0 0;
+  color: #1c414c;
+  font-size: 21px;
+  line-height: 1.35;
+  font-weight: 800;
+  letter-spacing: -0.35px;
+}
+
+.availability-panel-subtitle {
+  margin: 8px 0 0;
+  color: #84949b;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.availability-heading-icon {
+  display: grid;
+  flex-shrink: 0;
+  width: 43px;
+  height: 43px;
+  place-items: center;
+  border: 1px solid #d8eeee;
+  border-radius: 13px;
+  background: #eaf8f7;
+  color: #16858b;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.availability-count {
+  display: grid;
+  flex-shrink: 0;
+  min-width: 36px;
+  height: 36px;
+  padding: 0 10px;
+  place-items: center;
+  border: 1px solid #d8eeee;
+  border-radius: 11px;
+  background: #eaf8f7;
+  color: #16858b;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+/* Form */
+
+.availability-form {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.availability-field {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.availability-form label {
+  color: #36535d;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.availability-form select,
+.availability-form input {
+  width: 100%;
+  min-width: 0;
+  min-height: 46px;
+  padding: 11px 12px;
+  border: 1px solid #dce6e9;
+  border-radius: 10px;
+  outline: none;
+  background: #fff;
+  color: #284954;
+  font-family: inherit;
+  font-size: 13px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.availability-form select {
+  cursor: pointer;
+}
+
+.availability-form select:focus,
+.availability-form input:focus {
+  border-color: #2699a0;
+  background: #fcffff;
+  box-shadow: 0 0 0 3px rgb(38 153 160 / 12%);
+}
+
+.availability-form select:disabled,
+.availability-form input:disabled {
+  background: #f4f7f8;
+  cursor: not-allowed;
+}
+
+.availability-field-help {
+  margin: -1px 0 0;
+  color: #8999a0;
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+/* Selected location */
+
+.availability-selected-location {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid #d9eeeb;
+  border-radius: 12px;
+  background: linear-gradient(120deg, #f0fbf9, #f9fdfd);
+}
+
+.availability-selected-location-icon {
+  display: grid;
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: 11px;
+  background: #dff4f0;
+  color: #188c88;
+  font-size: 21px;
+}
+
+.availability-selected-location > div:last-child {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.availability-selected-location > div:last-child > span {
+  color: #7b9695;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.availability-selected-location strong {
+  color: #28564f;
+  font-size: 12px;
+}
+
+.availability-selected-location p {
+  margin: 0;
+  color: #718b89;
+  font-size: 11px;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+
+/* Time controls */
+
+.availability-time-section {
+  padding: 16px;
+  border: 1px solid #e6edef;
+  border-radius: 12px;
+  background: #fafcfd;
+}
+
+.availability-time-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.availability-time-section-heading > span {
+  color: #82949c;
+  font-size: 10px;
+}
+
+.availability-time-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+}
+
+.availability-time-fields > .availability-field {
+  min-width: 0;
+}
+
+.availability-time-fields input {
+  padding: 10px;
+}
+
+.availability-form-hint {
+  margin: 12px 0 0;
+  color: #83939a;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+/* Form buttons */
+
+.availability-save-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  width: 100%;
+  min-height: 48px;
+  margin-top: 1px;
+  padding: 12px 16px;
+  border: 1px solid #16848d;
+  border-radius: 10px;
+  background: linear-gradient(110deg, #167f8b, #209d9c);
+  color: #fff;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 5px 13px rgb(22 125 141 / 15%);
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease,
+    filter 0.2s ease;
+}
+
+.availability-save-btn > span:first-child {
+  font-size: 17px;
+}
+
+.availability-save-btn:hover:not(:disabled) {
+  filter: brightness(0.96);
+  box-shadow: 0 7px 17px rgb(22 125 141 / 22%);
+  transform: translateY(-1px);
+}
+
+.availability-save-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.availability-button-spinner {
+  width: 15px;
+  height: 15px;
+  border: 2px solid rgb(255 255 255 / 45%);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: availability-spin 0.7s linear infinite;
+}
+
+.availability-cancel-edit-btn {
+  min-height: 43px;
+  border: 1px solid #dce6e9;
+  border-radius: 10px;
+  background: #fff;
+  color: #526d76;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 750;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.availability-cancel-edit-btn:hover:not(:disabled) {
+  background: #f3f7f8;
+}
+
+.availability-cancel-edit-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.availability-form-footer {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  padding-top: 17px;
+  margin-top: 21px;
+  border-top: 1px solid #edf1f3;
+  color: #82949b;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.availability-form-footer > span {
+  flex-shrink: 0;
+  color: #168b92;
+  font-size: 15px;
+}
+
+/* Current location on schedule panel */
+
+.availability-current-location {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px;
+  margin: -3px 0 19px;
+  border: 1px solid #e2edef;
+  border-radius: 12px;
+  background: #f8fbfc;
+}
+
+.availability-current-location-icon {
+  display: grid;
+  flex-shrink: 0;
+  width: 39px;
+  height: 39px;
+  place-items: center;
+  border-radius: 11px;
+  background: #e4f5f5;
+  color: #16838c;
+  font-size: 21px;
+}
+
+.availability-current-location > div:last-child {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.availability-current-location > div:last-child > span {
+  color: #84959d;
+  font-size: 10px;
+}
+
+.availability-current-location strong {
+  color: #2b4e59;
+  font-size: 12px;
+}
+
+.availability-current-location p {
+  margin: 0;
+  color: #82939b;
+  font-size: 11px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+/* Schedule cards */
+
+.availability-schedule-list {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.availability-schedule-card {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 0;
+  padding: 15px;
+  border: 1px solid #e5edef;
+  border-radius: 13px;
+  background: #fff;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.availability-schedule-card:hover {
+  border-color: #c8e5e6;
+  background: #fdffff;
+  box-shadow: 0 5px 15px rgb(26 66 79 / 5%);
+  transform: translateY(-1px);
+}
+
+.availability-schedule-card-editing {
+  border-color: #5bb8b7;
+  background: #f3fbfa;
+  box-shadow: 0 0 0 2px rgb(38 153 160 / 8%);
+}
+
+.availability-day-icon {
+  display: grid;
+  flex-shrink: 0;
+  width: 43px;
+  height: 43px;
+  place-items: center;
+  border: 1px solid #dcefed;
+  border-radius: 12px;
+  background: #eaf7f5;
+  color: #168a8c;
+  font-size: 22px;
+}
+
+.availability-schedule-details {
+  min-width: 0;
+  flex: 1;
+}
+
+.availability-schedule-title-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 7px;
+}
+
+.availability-schedule-details h3 {
+  margin: 0;
+  color: #294b56;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.availability-schedule-badge {
+  padding: 4px 7px;
+  border: 1px solid #d9eee2;
+  border-radius: 6px;
+  background: #f0faf4;
+  color: #37815a;
+  font-size: 9px;
+  font-weight: 750;
+}
+
+.availability-schedule-time {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  color: #657d86;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.availability-clock-icon {
+  color: #168b91;
+  font-size: 16px;
+}
+
+.availability-time-separator {
+  color: #91a1a7;
+  font-size: 10px;
+}
+
+.availability-schedule-actions {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 7px;
+}
+
+.availability-edit-btn,
+.availability-delete-btn {
+  min-height: 32px;
+  padding: 7px 11px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 750;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.availability-edit-btn {
+  border-color: #cde6e8;
+  background: #eff9fa;
+  color: #197884;
+}
+
+.availability-edit-btn:hover:not(:disabled) {
+  border-color: #a6d4d8;
+  background: #dff3f4;
+}
+
+.availability-delete-btn {
+  border-color: #f0dede;
+  background: #fff7f6;
+  color: #b54a4a;
+}
+
+.availability-delete-btn:hover:not(:disabled) {
+  border-color: #eac5c5;
+  background: #ffebea;
+}
+
+.availability-edit-btn:disabled,
+.availability-delete-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.availability-schedule-footer {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  padding-top: 16px;
+  margin-top: 19px;
+  border-top: 1px solid #edf1f3;
+}
+
+.availability-schedule-footer > span {
+  display: grid;
+  flex-shrink: 0;
+  width: 19px;
+  height: 19px;
+  place-items: center;
+  border-radius: 50%;
+  background: #e4f6eb;
+  color: #278052;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.availability-schedule-footer p {
+  margin: 0;
+  color: #7c9097;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+/* Empty states */
+
+.availability-empty {
+  padding: 48px 24px;
+  border: 1px solid #e2ecef;
+  border-radius: 17px;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 5px 24px rgb(23 66 79 / 4%);
+}
+
+.availability-empty-icon {
+  display: grid;
+  width: 55px;
+  height: 55px;
+  place-items: center;
+  margin: 0 auto 17px;
+  border-radius: 16px;
+  background: #e8f7f6;
+  color: #16858b;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.availability-empty h2 {
+  margin: 0 0 10px;
+  color: #234751;
+  font-size: 20px;
+}
+
+.availability-empty p {
+  max-width: 500px;
+  margin: 0 auto;
+  color: #7d9098;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.availability-schedules-empty {
+  padding: 38px 17px;
+  border: 1px dashed #d8e6e9;
+  border-radius: 13px;
+  background: #fbfdfd;
+  text-align: center;
+}
+
+.availability-empty-calendar {
+  display: grid;
+  width: 53px;
+  height: 53px;
+  place-items: center;
+  margin: 0 auto 15px;
+  border: 1px solid #dcefed;
+  border-radius: 15px;
+  background: #eaf7f5;
+  color: #168a8c;
+  font-size: 27px;
+}
+
+.availability-schedules-empty h3 {
+  margin: 0 0 8px;
+  color: #294b56;
+  font-size: 15px;
+}
+
+.availability-schedules-empty p {
+  max-width: 310px;
+  margin: 0 auto;
+  color: #82939b;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* Loading */
+
+.availability-loading,
+.availability-inline-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #71858e;
+  font-size: 13px;
+}
+
+.availability-loading {
+  min-height: 65vh;
+  flex-direction: column;
+  text-align: center;
+}
+
+.availability-loading h2 {
+  margin: 7px 0 0;
+  color: #234751;
+  font-size: 19px;
+}
+
+.availability-loading p {
+  margin: 0;
+  color: #83949b;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.availability-inline-loading {
+  min-height: 180px;
+}
+
+.availability-spinner {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  flex-shrink: 0;
+  border: 3px solid #dcebed;
+  border-top-color: #16858d;
+  border-radius: 50%;
+  animation: availability-spin 0.8s linear infinite;
+}
+
+@keyframes availability-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Footer */
+
+.availability-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 23px 2px 5px;
+  margin-top: 28px;
+  border-top: 1px solid #e1eaed;
+  color: #87969d;
+  font-size: 11px;
+}
+
+.availability-footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #197f89;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+}
+
+.availability-footer-logo {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  border-radius: 9px;
+  background: #e2f4f2;
+  color: #16858b;
+  font-size: 15px;
+}
+
+/* Tablet */
+
+@media (max-width: 1100px) {
+  .availability-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .availability-form-panel {
+    order: 1;
+  }
+
+  .availability-schedules-panel {
+    order: 2;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+  .availability-page {
+    padding: 25px 16px;
+  }
+
+  .availability-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 19px;
+  }
+
+  .availability-header h1 {
+    font-size: 30px;
+  }
+
+  .availability-back-btn {
+    align-self: flex-start;
+  }
+
+  .availability-profile-card {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 19px;
+  }
+
+  .availability-profile-status {
+    align-self: flex-start;
+  }
+
+  .availability-stats {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 11px;
+  }
+
+  .availability-stat-card {
+    padding: 15px;
+  }
+
+  .availability-stat-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .availability-panel {
+    padding: 19px;
+  }
+
+  .availability-panel-heading h2 {
+    font-size: 19px;
+  }
+
+  .availability-time-fields {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .availability-time-section {
+    padding: 13px;
+  }
+
+  .availability-schedule-card {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 11px;
+    padding: 13px;
+  }
+
+  .availability-day-icon {
+    width: 39px;
+    height: 39px;
+  }
+
+  .availability-schedule-details {
+    padding-top: 3px;
+  }
+
+  .availability-schedule-actions {
+    width: 100%;
+    padding-left: 50px;
+  }
+
+  .availability-schedule-actions button {
+    flex: 1;
+    min-height: 36px;
+  }
+
+  .availability-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Very narrow phones */
+
+@media (max-width: 380px) {
+  .availability-page {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .availability-panel {
+    padding: 15px;
+  }
+
+  .availability-profile-main {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .availability-profile-avatar {
+    width: 48px;
+    height: 48px;
+  }
+
+  .availability-profile-info h2 {
+    font-size: 17px;
+  }
+
+  .availability-time-fields {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .availability-time-section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .availability-page *,
+  .availability-page *::before,
+  .availability-page *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+
+/* Consultation locations section */
+
+.availability-locations-section {
+  margin: 28px 0;
+  padding: 26px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+}
+
+.availability-locations-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.availability-locations-heading h2 {
+  margin: 7px 0;
+  color: #0f172a;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.availability-locations-heading p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.availability-location-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.availability-location-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  width: 100%;
+  min-width: 0;
+  padding: 20px;
+  text-align: left;
+  color: #334155;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.availability-location-card:hover {
+  border-color: #80c9ce;
+  box-shadow: 0 5px 16px rgba(22, 125, 141, 0.08);
+}
+
+.availability-location-card-selected {
+  background: #f0fbfb;
+  border-color: #167d8d;
+  box-shadow: 0 0 0 1px #167d8d;
+}
+
+.availability-location-card-icon {
+  display: flex;
+  flex: 0 0 42px;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  color: #167d8d;
+  background: #e4f5f5;
+  border-radius: 12px;
+  font-size: 21px;
+}
+
+.availability-location-card-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+}
+
+.availability-location-card-topline {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.availability-location-card-topline strong {
+  color: #0f172a;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.availability-location-selected-badge {
+  padding: 4px 8px;
+  color: #116773;
+  background: #d9f2f1;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.availability-location-card-address {
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.availability-location-card-fee {
+  color: #334155;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.availability-location-card-arrow {
+  flex-shrink: 0;
+  color: #64748b;
+  font-size: 20px;
+}
+
+.availability-location-card-selected .availability-location-card-arrow {
+  color: #167d8d;
+}
+
+@media (max-width: 768px) {
+  .availability-locations-section {
+    padding: 18px;
+  }
+
+  .availability-location-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .availability-location-card {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .availability-locations-heading h2 {
+    font-size: 18px;
+  }
+
+  .availability-location-card {
+    gap: 10px;
+    padding: 13px;
+  }
+
+  .availability-location-card-icon {
+    flex-basis: 36px;
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* Inline schedule editing */
+
+.availability-inline-edit-fields {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.availability-inline-edit-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.availability-inline-edit-field label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #52636a;
+}
+
+.availability-inline-edit-field input,
+.availability-inline-edit-field select {
+  width: 100%;
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid #d8e4e6;
+  border-radius: 8px;
+  background: #fff;
+  color: #24383e;
+  font: inherit;
+  outline: none;
+}
+
+.availability-inline-edit-field input:focus,
+.availability-inline-edit-field select:focus {
+  border-color: #167d8d;
+  box-shadow: 0 0 0 3px rgba(22, 125, 141, 0.1);
+}
+
+.availability-inline-edit-times {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.availability-schedule-card-editing {
+  align-items: flex-start;
+}
+
+.availability-schedule-card-editing .availability-schedule-actions {
+  align-self: center;
+}
+
+.availability-schedule-actions .availability-save-btn {
+  width: auto;
+  min-width: 75px;
+  padding: 9px 14px;
+  margin: 0;
+}
+
+.availability-schedule-actions .availability-cancel-edit-btn {
+  width: auto;
+  margin: 0;
+  padding: 9px 12px;
+}
+
+.availability-schedule-actions button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .availability-schedule-card-editing {
+    flex-wrap: wrap;
+  }
+
+  .availability-schedule-card-editing .availability-inline-edit-fields {
+    flex-basis: calc(100% - 55px);
+  }
+
+  .availability-schedule-card-editing .availability-schedule-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
